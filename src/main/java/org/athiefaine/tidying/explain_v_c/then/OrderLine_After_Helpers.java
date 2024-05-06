@@ -5,6 +5,10 @@ public class OrderLine_After_Helpers {
     private int quantity;
     private double itemPrice;
 
+    public OrderLine_After_Helpers(int quantity, double itemPrice) {
+        this.quantity = quantity;
+        this.itemPrice = itemPrice;
+    }
 
     public double amount() {
         return applyTax(amountExcludingTax());

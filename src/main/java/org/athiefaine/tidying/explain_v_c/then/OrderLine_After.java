@@ -5,6 +5,10 @@ public class OrderLine_After {
     private int quantity;
     private double itemPrice;
 
+    public OrderLine_After(int quantity, double itemPrice) {
+        this.quantity = quantity;
+        this.itemPrice = itemPrice;
+    }
 
     public double amount() {
         double amountExcludingTax = quantity * itemPrice;
