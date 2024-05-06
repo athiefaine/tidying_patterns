@@ -2,8 +2,8 @@ package org.athiefaine.tidying.explain_v_c.then;
 
 public class OrderLine_After {
     public static final double VAT_RATE = 0.2;
-    private int quantity;
-    private double itemPrice;
+    private final int quantity;
+    private final double itemPrice;
 
     public OrderLine_After(int quantity, double itemPrice) {
         this.quantity = quantity;

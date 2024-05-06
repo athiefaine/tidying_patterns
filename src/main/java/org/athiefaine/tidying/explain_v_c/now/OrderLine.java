@@ -1,8 +1,8 @@
 package org.athiefaine.tidying.explain_v_c.now;
 
 public class OrderLine {
-    private int quantity;
-    private double itemPrice;
+    private final int quantity;
+    private final double itemPrice;
 
     public OrderLine(int quantity, double itemPrice) {
         this.quantity = quantity;
