@@ -23,16 +23,16 @@ public class TripService {
         return noTrips();
     }
 
-	private ArrayList<Trip> noTrips() {
-		return new ArrayList<>();
+	protected User getLoggedInUser() {
+		return UserSession.getInstance().getLoggedUser();
 	}
 
 	protected List<Trip> tripsBy(User user) {
 		return TripDAO.findTripsByUser(user);
 	}
 
-	protected User getLoggedInUser() {
-		return UserSession.getInstance().getLoggedUser();
+	private ArrayList<Trip> noTrips() {
+		return new ArrayList<>();
 	}
 
 }
