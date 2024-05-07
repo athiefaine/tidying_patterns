@@ -17,7 +17,7 @@ public class TripService {
             throw new UserNotLoggedInException();
         }
 
-        if (isFriendWith(user, loggedUser)) {
+        if (user.isFriendWith(loggedUser)) {
             return tripsBy(user);
         }
         return noTrips();
@@ -25,17 +25,6 @@ public class TripService {
 
 	private ArrayList<Trip> noTrips() {
 		return new ArrayList<>();
-	}
-
-	private boolean isFriendWith(User user, User loggedUser) {
-		boolean isFriend = false;
-		for (User friend : user.getFriends()) {
-			if (friend.equals(loggedUser)) {
-				isFriend = true;
-				break;
-			}
-		}
-		return isFriend;
 	}
 
 	protected List<Trip> tripsBy(User user) {
