@@ -16,13 +16,7 @@ public class TripService {
             throw new UserNotLoggedInException();
         }
 
-		boolean isFriend = false;
-        for (User friend : user.getFriends()) {
-            if (friend.equals(loggedUser)) {
-                isFriend = true;
-                break;
-            }
-        }
+		boolean isFriend = isFriend(user, loggedUser);
 
 		List<Trip> tripList = new ArrayList<>();
         if (isFriend) {
@@ -30,6 +24,17 @@ public class TripService {
         }
         return tripList;
     }
+
+	private boolean isFriend(User user, User loggedUser) {
+		boolean isFriend = false;
+		for (User friend : user.getFriends()) {
+			if (friend.equals(loggedUser)) {
+				isFriend = true;
+				break;
+			}
+		}
+		return isFriend;
+	}
 
 	protected List<Trip> tripsBy(User user) {
 		return TripDAO.findTripsByUser(user);
