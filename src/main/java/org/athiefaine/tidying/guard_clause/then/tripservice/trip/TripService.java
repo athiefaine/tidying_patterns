@@ -24,7 +24,7 @@ public class TripService {
             }
         }
 
-		List<Trip> tripList = new ArrayList<Trip>();
+		List<Trip> tripList = new ArrayList<>();
         if (isFriend) {
             tripList = tripsBy(user);
         }
