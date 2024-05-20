@@ -1,4 +1,5 @@
-%%{init: { 'logLevel': 'debug', 'theme': 'default' , 'themeVariables': {
+```mermaid
+%%{init: { 'theme': 'default' , 'themeVariables': {
               'cScale0': '#26DFD0', 'cScaleLabel0': '#555555',
               'cScale1': '#F62AA0', 'cScaleLabel1': '#555555',
               'cScale2': '#B8EE30', 'cScaleLabel2': '#555555'
@@ -13,4 +14,5 @@ timeline
         : will be cheaper once easier changes have been done
         : reserve this for the "fun list"
     never : the behavior likely won't change
-        : "if it ain't broke don't fix it" 
+        : "if it ain't broke don't fix it"
+ ```
