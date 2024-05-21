@@ -79,5 +79,40 @@ We may challenge the following points:
   - next to these questions we can improve business cohesion: where is it more relevant to handle VAT ?
 - these questions are more visible thanks to the tidyings performed before ; optionality also lies in awareness and understanding of business rules and in the choices and questions that arise from them
 - - as it was said about options, business mastery can be an excellent underlying
+ 
+## Trip Service
+
+This is taken from Sandro Mancuso's kata https://github.com/sandromancuso/trip-service-kata
+
+For the purpose of tidying, a test coverage has been written beforehand.
+
+### Guard clause
+
+- invert condition
+- remove `else`
+- we remove one level of indention, compliant with calisthenics
+  - one level of indentation by method
+  - don't use `else`
+
+### Chunk statements
+
+- separate `isFriend` logic from trips calculation logic
+
+### Move declaration and initialization together
+
+- we go further by bringing the initialization and usage closer together
+- this is performed for variables `loggedUser`, `isFriend`, and `tripList`
+
+### IDE quick win
+
+- generic type inference
+
+### Extract helper
+
+- extract method `isFriendWith()`
+- beware with `static`
+- calisthenics again
+-   only one level of indentation
+-   keep all entities small
 
 
