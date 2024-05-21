@@ -105,7 +105,7 @@ For the purpose of tidying, a test coverage has been written beforehand.
 
 ### IDE quick win
 
-- generic type inference
+- generic type inference for `List<Trip>`
 
 ### Extract helper
 
@@ -114,5 +114,31 @@ For the purpose of tidying, a test coverage has been written beforehand.
 - calisthenics again
 -   only one level of indentation
 -   keep all entities small
+
+### Cohesion order
+
+Cohesion order issue between `tripList` and `isFriend`
+- we want to drop variable `tripList`
+- so we perform a direct return of `tripsBy(user)`
+- **Extract helper**: the returned empty list is extracted in a method `noTrips()`
+  - business flavor is improved
+- **One pile**: variable `tripList` is inlined in the last return so the variable disappears
+- the same thing can be done with variable `isFriend`
+- next method `isFriendWith()` could be moved to class `User` to improve cohesion (and have a better separation of concerns)
+
+### IDE quick wins
+
+In the class `User` just modified by the move (boy-scout rule)
+- generic types inferences
+- `final`keyword
+
+Don't under-estimate IDE as a provider of optionality.
+
+### Reading order
+
+- method definitions for `getLoggedInUser()`, `tripsNy()`, and `noTrips()` are reordered to match the calling order
+
+
+
 
 
