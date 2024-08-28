@@ -6,13 +6,12 @@
        } } }%%
 timeline
     first : next changes are made immediately easier
-        : code readability is improved
-    after : the same area of code is likely to change soon
-        : it's cheaper to tidy soon
-        : cost (tidying) <= cost (behavior change)
-    later : could be done "after" if you had enough time
-        : will be cheaper once easier changes have been done
-        : reserve this for the "fun list"
-    never : the behavior likely won't change
-        : "if it ain't broke don't fix it"
+        : code readability is immediately improved
+    after : code likely to change soon
+        : cheaper to tidy sooner than later
+    later : less urgent, would do with enough time
+        : depends on easier changes
+        : add to a "Fun list"
+    never : unlikely to change
+        : "If it ain't broke, don't fix it"
  ```
